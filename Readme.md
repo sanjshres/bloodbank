@@ -1,4 +1,7 @@
-How to Run Project
+# Introduction 
+ This project manages blood donor management system.
+
+## How to Run Project
 1. Put bbdms folder inside root directory
 
 Database Configuration
