@@ -12,4 +12,4 @@ Open Your browser put inside browser “http://localhost/bbdms/admin”
 
 Login Details for admin :
 Username: admin
-Password: Test@12345
+Password: sanjay123
