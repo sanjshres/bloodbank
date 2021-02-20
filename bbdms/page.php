@@ -14,7 +14,7 @@ include('includes/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Blood Donor Web Application 2019</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,7 @@ include('includes/config.php');
 </head>
 
 <body>
+
 
 
 <?php include('includes/header.php');?>
@@ -70,6 +71,16 @@ foreach($results as $result)
         <p><?php  echo $result->detail; ?> </p>
 
     </div>
+    
+    <br>
+    <br>
+    <div class="col-md-4" >
+                <a class="btn btn-lg btn-secondary btn-block" href="become-donar.php">Become a Donar</a>
+            </div>
+            <br>
+            <br>
+            <br>
+
     <!-- /.container -->
     <?php } } ?>
 

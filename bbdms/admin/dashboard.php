@@ -166,6 +166,7 @@ $query=$query6->rowCount();
     
 		// Line chart from swirlData for dashReport
 		var ctx = document.getElementById("dashReport").getContext("2d");
+		console.log(swirlData)
 		window.myLine = new Chart(ctx).Line(swirlData, {
 			responsive: true,
 			scaleShowVerticalLines: false,

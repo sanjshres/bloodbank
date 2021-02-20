@@ -47,7 +47,7 @@ $error="Something went wrong. Please try again";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BloodBank & Donor Management System | Become A Donar</title>
+    <title> Become A Donor</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">

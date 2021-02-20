@@ -14,7 +14,7 @@ include('includes/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BloodBank & Donor Management System | Become A Donar</title>
+    <title>Search Blood Donor</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
@@ -131,7 +131,7 @@ foreach($results as $result)
 
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="images/blood-donor.jpg" alt="" ></a>
+                    <a href="#"><img class="card-img-top img-fluid" src="images/donor2.jpg" alt="" ></a>
                     <div class="card-block">
                         <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
                         <p class="card-text"><b>Mobile No. / Email Id :</b> <?php echo htmlentities($result->MobileNumber);?> /

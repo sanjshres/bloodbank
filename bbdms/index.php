@@ -12,7 +12,7 @@ include('includes/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blood Donor Management System</title>
+    <title>Blood Donor Management System 2019</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
@@ -44,36 +44,48 @@ include('includes/config.php');
     <!-- Page Content -->
     <div class="container">
 
-        <h1 class="my-4 text-center">Welcome to Blood Donor Management System</h1>
+        <h1 class="my-4">Welcome to Blood Donor Web Application</h1>
 
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <h4 class="card-header">The need for blood</h4>
+                    <h4 class="card-header">Why should I donate blood?</h4>
                    
-                        <p class="card-text" style="padding-left:2%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="card-text" style="padding-left:2%">Safe blood saves lives and improves health. Blood transfusion is needed for:
+                           <li> women with complications of pregnancy, such as ectopic pregnancies and haemorrhage before, during or after childbirth</li><li>
+children with severe anaemia often resulting from malaria or malnutrition</li><li>
+people with severe trauma following man-made and natural disasters</li></p>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <h4 class="card-header">Blood Tips</h4>
+                    <h4 class="card-header">Blood Donation Tips</h4>
                    
-                        <p class="card-text" style="padding-left:2%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="card-text" style="padding-left:2%"><li>Drink an extra 16 oz. of water before your appointment.</li><li>
+Eat a healthy meal, avoiding fatty foods like hamburgers, fries or ice cream.</li><li>
+Wear a shirt with sleeves that you can roll up above your elbows.</li><li>
+Relax, listen to music or read while you donate.</li> </p>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card">
-                    <h4 class="card-header">Who you could Help</h4>
+                    <h4 class="card-header">Eligibility Requirements</h4>
                    
-                        <p class="card-text" style="padding-left:2%">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                        <p class="card-text" style="padding-left:2%">In order to donate you must meet the requirements listed below.
+
+
+<li>Be in good health and feeling well</li>
+<li>Be at least 18 years old</li>
+<li>Weight at least 110 pounds</li>
+<li>Are not pregnant</li> </p>
                 </div>
             </div>
         </div>
         <!-- /.row -->
 
         <!-- Portfolio Section -->
-        <h2>Some of the Donars</h2>
+        <h2>Some of the Donar</h2>
 
         <div class="row">
                    <?php 
@@ -91,7 +103,7 @@ foreach($results as $result)
 
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="images/blood-donor.jpg" alt="" ></a>
+                    <a href="#"><img class="card-img-top img-fluid" src="images/donor5.png" alt="" ></a>
                     <div class="card-block">
                         <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
 <p class="card-text"><b>  Gender :</b> <?php echo htmlentities($result->Gender);?></p>
@@ -114,7 +126,7 @@ foreach($results as $result)
         <div class="row">
             <div class="col-lg-6">
                 <h2>BLOOD GROUPS</h2>
-          <p>  Blood group of any human being will mainly fall in any one of the following groups.</p>
+          <p>  blood group of any human being will mainly fall in any one of the following groups.</p>
                 <ul>
                 
                 
@@ -125,7 +137,7 @@ foreach($results as $result)
                 </ul>
                 <p>A healthy diet helps ensure a successful blood donation, and also makes you feel better! Check out the following recommended foods to eat prior to your donation.</p>
             </div>
-            <div class="col-lg-6 text-center">
+            <div class="col-lg-6">
                 <img class="img-fluid rounded" src="images/blood-donor (1).jpg" alt="">
             </div>
         </div>
@@ -135,15 +147,15 @@ foreach($results as $result)
 
         <!-- Call to Action Section -->
         <div class="row mb-4">
-            <div class="col-md-6 text-justify">
+            <div class="col-md-8">
             <h4>UNIVERSAL DONORS AND RECIPIENTS</h4>
                 <p>
 The most common blood type is O, followed by type A.
 
 Type O individuals are often called "universal donors" since their blood can be transfused into persons with any blood type. Those with type AB blood are called "universal recipients" because they can receive blood of any type.</p>
             </div>
-            <div class="m-auto col-md-6">
-                <a class="btn btn-lg btn-danger btn-block" href="become-donar.php">Become a Donar</a>
+            <div class="col-md-4">
+                <a class="btn btn-lg btn-secondary btn-block" href="become-donar.php">Become a Donar</a>
             </div>
         </div>
 

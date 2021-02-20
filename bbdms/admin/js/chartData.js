@@ -1,5 +1,5 @@
 var swirlData = {
-    labels: ["January", "February", "March", "April", "May", "June", "July","August"],
+    labels: ["January", "February", "March", "April", "May", "June", "July", "August","September","October","November","December"],
     datasets: [
         {
             label: "My First dataset",
@@ -9,7 +9,7 @@ var swirlData = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 86, 55, 40]
+            data: [10, 59, 80, 81, 86, 55, 40, 50, 20, 30, 10, 05]
         },
         {
             label: "My Second dataset",
@@ -19,29 +19,35 @@ var swirlData = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            data: [28, 48, 40, 19, 86, 27, 90, 50, 30, 40, 30, 15]
         }
     ]
 };
 
 var doughnutData = [
     {
-        value: 300,
+        value: 150,
         color:"#F7464A",
         highlight: "#FF5A5E",
-        label: "Red"
+        label: "A+"
+    },
+    {
+        value: 50,
+        color:"#f77245",
+        highlight: "#f98f6c",
+        label: "A-"
     },
     {
         value: 50,
         color: "#46BFBD",
         highlight: "#5AD3D1",
-        label: "Green"
+        label: "B+"
     },
     {
         value: 100,
         color: "#FDB45C",
         highlight: "#FFC870",
-        label: "Yellow"
+        label: "AB+"
     }
 ]
 
