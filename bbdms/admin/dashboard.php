@@ -7,6 +7,13 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
+	$sql = "SELECT IFNULL(COUNT(tblblooddonars.id), 0) as total, tblbloodgroup.BloodGroup as BloodGroup FROM tblbloodgroup LEFT JOIN tblblooddonars ON tblbloodgroup.BloodGroup = tblblooddonars.BloodGroup GROUP BY tblbloodgroup.BloodGroup";
+	$query = $dbh->prepare($sql);
+	$query-> execute();
+	$resultsdata = $query->fetchAll();
+	// $results = mysqli_fetch_array($query);
+	
+
 	?>
 <!doctype html>
 <html lang="en" class="no-js">
@@ -85,7 +92,7 @@ $results1=$query1->fetchAll(PDO::FETCH_OBJ);
 $regbd=$query1->rowCount();
 ?>
 													<div class="stat-panel-number h1 "><?php echo htmlentities($regbd);?></div>
-													<div class="stat-panel-title text-uppercase">Registered Blood Group</div>
+													<div class="stat-panel-title text-uppercase">Registered Blood Donors</div>
 												</div>
 											</div>
 											<a href="donor-list.php" class="block-anchor panel-footer text-center">Full Detail &nbsp; <i class="fa fa-arrow-right"></i></a>
@@ -119,19 +126,19 @@ $query=$query6->rowCount();
 					<div class="row">
 						<div class="col-md-6">
 							<canvas id="chart-area3"></canvas>
-							<div class="stat-panel-title text-uppercase text-center">Pie-Chart</div>
+							<div class="stat-panel-title text-uppercase text-center">No. of Donors Pie-Chart</div>
 
 						</div>
 						<div class="col-md-6">
 							<canvas id="chart-area4"></canvas>
-							<div class="stat-panel-title text-uppercase text-center">Doughnut Chart</div>
+							<div class="stat-panel-title text-uppercase text-center">No. of Donors Doughnut Chart</div>
 
 						</div>
 					</div>
 					<div class="row">
 					<div class="col-md-12">
 					<canvas id="dashReport"></canvas>
-					<div class="stat-panel-title text-uppercase text-center">Line Chart</div>
+					<div class="stat-panel-title text-uppercase text-center">No. of Visitors and Donors per month</div>
 
 					</div>
 					</div>
@@ -157,7 +164,12 @@ $query=$query6->rowCount();
 	<script src="js/dataTables.bootstrap.min.js"></script>
 	<script src="js/Chart.min.js"></script>
 	<script src="js/fileinput.js"></script>
+	<script>
+		var donutChartData2 = <?php echo json_encode($resultsdata) ?>;
+		console.log({donutChartData2})
+	</script>
 	<script src="js/chartData.js"></script>
+	
 	<script src="js/main.js"></script>
 	
 	<script>

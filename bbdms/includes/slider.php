@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 
-                <div class="carousel-item" style="background-image: url('images/two.jpg')">
+                <div class="carousel-item" style="background-image: url('images/three.jpg')">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
