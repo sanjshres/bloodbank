@@ -107,11 +107,11 @@ $error="Something went wrong. Please try again";
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Full Name<span style="color:red">*</span></div>
-<div><input type="text" name="fullname" class="form-control" required></div>
+<div><input type="text" name="fullname" class="form-control" pattern="(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})" required></div>
 </div>
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Mobile Number<span style="color:red">*</span></div>
-<div><input type="text" name="mobileno" class="form-control" required></div>
+<div><input type="number" name="mobileno" class="form-control" required></div>
 </div>
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Email Id</div>

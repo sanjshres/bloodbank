@@ -130,11 +130,11 @@ function isNumberKey(evt)
 <div class="form-group">
 <label class="col-sm-2 control-label">Full Name<span style="color:red">*</span></label>
 <div class="col-sm-4">
-<input type="text" name="fullname" class="form-control" required>
+<input type="text" name="fullname" class="form-control"  pattern="[1-100]{}" required> 
 </div>
 <label class="col-sm-2 control-label">Mobile No<span style="color:red">*</span></label>
 <div class="col-sm-4">
-<input type="text" name="mobileno" onKeyPress="return isNumberKey(event)"  maxlength="10" class="form-control" required>
+<input type="text" name="mobileno" onKeyPress="return isNumberKey(event)"  maxlength="10" minlength="9" class="form-control" required>
 </div>
 </div>
 
