@@ -110,8 +110,8 @@ $error="Something went wrong. Please try again";
 <div><input type="text" name="fullname" class="form-control" pattern='^[a-zA-Z]+(?:\s[a-zA-Z]+)+$' required></div>
 </div>
 <div class="col-lg-4 mb-4">
-<div class="font-italic">Mobile Number<span style="color:red">*</span></div>
-<div><input type="text" name="mobileno" class="form-control" required></div>
+<div class="font-italic">Mobile Number (+977)<span style="color:red">*</span></div>
+<div><input type="text" name="mobileno" class="form-control" pattern="^(\+\d{1,3}[- ]?)?\d{10}$"  maxlength="10" minlength="10" required></div>
 </div>
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Email Id</div>
@@ -122,7 +122,7 @@ $error="Something went wrong. Please try again";
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Age<span style="color:red">*</span></div>
-<div><input type="text" name="age" class="form-control" required></div>
+<div><input type="number" name="age" class="form-control" max="50"  min="18" required></div>
 </div>
 
 
