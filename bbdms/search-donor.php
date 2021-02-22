@@ -96,7 +96,7 @@ foreach($results as $result)
 
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Location </div>
-<div><select name="address" class="form-control" required>
+<div><select name="location" class="form-control" required>
 <?php $sql = "SELECT * from   tblblooddonars ";
 $query = $dbh -> prepare($sql);
 $query->execute();
@@ -106,7 +106,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?>  
-<option value="<?php echo htmlentities($result->address);?>"><?php echo htmlentities($result->address);?></option>
+<option value="<?php echo htmlentities($result->Address);?>"><?php echo htmlentities($result->Address);?></option>
 <?php }} ?>
 </select>
 </div>
@@ -129,7 +129,7 @@ if(isset($_POST['submit']))
 $status=1;
 $bloodgroup=$_POST['bloodgroup'];
 $location=$_POST['location'];
-$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) ||  (Address=:location)";
+$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) &&  (Address=:location)";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->bindParam(':bloodgroup',$bloodgroup,PDO::PARAM_STR);
