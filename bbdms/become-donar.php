@@ -107,7 +107,7 @@ $error="Something went wrong. Please try again";
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Full Name<span style="color:red">*</span></div>
-<div><input type="text" name="fullname" class="form-control" required></div>
+<div><input type="text" name="fullname" class="form-control" pattern='^[a-zA-Z]+(?:\s[a-zA-Z]+)+$' required></div>
 </div>
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Mobile Number<span style="color:red">*</span></div>
