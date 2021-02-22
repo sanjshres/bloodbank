@@ -159,7 +159,20 @@ foreach($results as $result)
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Address</div>
-<div><textarea class="form-control" name="address"></textarea></div>
+<div><select name="address" class="form-control" required>
+<?php $sql = "SELECT * from  tbllocation ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               ?>  
+<option value="<?php echo htmlentities($result->address);?>"><?php echo htmlentities($result->address);?></option>
+<?php }} ?>
+</select>
+</div>
 </div>
 
 <div class="col-lg-8 mb-4">
