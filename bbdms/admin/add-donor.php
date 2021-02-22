@@ -130,11 +130,11 @@ function isNumberKey(evt)
 <div class="form-group">
 <label class="col-sm-2 control-label">Full Name<span style="color:red">*</span></label>
 <div class="col-sm-4">
-<input type="text" name="fullname" class="form-control" required>
+<input type="text" name="fullname" class="form-control" pattern='^[a-zA-Z]+(?:\s[a-zA-Z]+)+$' required>
 </div>
 <label class="col-sm-2 control-label">Mobile No<span style="color:red">*</span></label>
 <div class="col-sm-4">
-<input type="text" name="mobileno" onKeyPress="return isNumberKey(event)"  maxlength="10" class="form-control" required>
+<input type="text" name="mobileno" onKeyPress="return isNumberKey(event)" pattern="^(\+\d{1,3}[- ]?)?\d{10}$"  maxlength="10" minlength="10" class="form-control" required>
 </div>
 </div>
 
@@ -145,7 +145,7 @@ function isNumberKey(evt)
 </div>
 <label class="col-sm-2 control-label">Age<span style="color:red">*</span></label>
 <div class="col-sm-4">
-<input type="text" name="age" class="form-control" required>
+<input type="number" name="age" min='18' max='50' class="form-control" required>
 </div>
 </div>
 
@@ -186,7 +186,15 @@ foreach($results as $result)
 <div class="form-group">
 <label class="col-sm-2 control-label">Address</label>
 <div class="col-sm-10">
-<textarea class="form-control" name="address" ></textarea>
+<select name="address" class="form-control" required>
+<option value="kathmandu">Kathmandu</option>
+<option value="Bhaktapur">Bhaktapur</option>
+<option value="Lalitpur">Lalitpur</option>
+<option value="Dhulikhhel">Dhulikhel</option>
+<option value="Hetauda">Hetauda</option>
+<option value="Bidur">Bidur</option>
+
+</select>
 </div>
 </div>
 
