@@ -76,7 +76,7 @@ Relax, listen to music or read while you donate.</li> </p>
 
 
 <li>Be in good health and feeling well</li>
-<li>Be at least 18 years old</li>
+<li>Be at least 18 years old or atmost 50 years old.</li>
 <li>Weight at least 110 pounds</li>
 <li>Are not pregnant</li> </p>
                 </div>

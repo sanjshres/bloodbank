@@ -47,7 +47,7 @@ $error="Something went wrong. Please try again";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Become A Donor</title>
+    <title>BloodBank & Donor Management System | Become A Donar</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
@@ -107,11 +107,11 @@ $error="Something went wrong. Please try again";
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Full Name<span style="color:red">*</span></div>
-<div><input type="text" name="fullname" class="form-control" pattern="(^[A-Za-z]{3,16})([ ]{0,1})([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})?([ ]{0,1})?([A-Za-z]{3,16})" required></div>
+<div><input type="text" name="fullname" class="form-control" pattern='^[a-zA-Z]+(?:\s[a-zA-Z]+)+$' required></div>
 </div>
 <div class="col-lg-4 mb-4">
-<div class="font-italic">Mobile Number<span style="color:red">*</span></div>
-<div><input type="number" name="mobileno" class="form-control" required></div>
+<div class="font-italic">Mobile Number (+977)<span style="color:red">*</span></div>
+<div><input type="text" name="mobileno" class="form-control" pattern="^(\+\d{1,3}[- ]?)?\d{10}$"  maxlength="10" minlength="10" required></div>
 </div>
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Email Id</div>
@@ -122,7 +122,7 @@ $error="Something went wrong. Please try again";
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Age<span style="color:red">*</span></div>
-<div><input type="text" name="age" class="form-control" required></div>
+<div><input type="number" name="age" class="form-control" max="50"  min="18" required></div>
 </div>
 
 
@@ -159,7 +159,24 @@ foreach($results as $result)
 <div class="row">
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Address</div>
-<div><textarea class="form-control" name="address"></textarea></div>
+<div><select name="address" class="form-control" required>
+<option value="kathmandu">Kathmandu</option>
+<option value="Bhaktapur">Bhaktapur</option>
+<option value="Lalitpur">Lalitpur</option>
+<option value="Kaverepalanchok">Kaverepalanchok</option>
+<option value="Makwanpur">Makwanpur</option>
+<option value="Chitwan">Chitwan</option>
+<option value="Sindhupalchok">Sindhupalchok</option>
+<option value="Nuwakot">Nuwakot</option>
+<option value="Rasuwa">Rasuwa</option>
+<option value="Sindhuli">Sindhuli</option>
+<option value="Ramechhap">Ramechhap</option>
+<option value="Dolakha">Dolakha</option>
+<option value="Dhading">Dhading</option>
+
+
+</select>
+</div>
 </div>
 
 <div class="col-lg-8 mb-4">

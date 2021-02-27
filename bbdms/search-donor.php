@@ -14,7 +14,7 @@ include('includes/config.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Search Blood Donor</title>
+    <title>BloodBank & Donor Management System | Become A Donar</title>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="css/modern-business.css" rel="stylesheet">
@@ -96,7 +96,20 @@ foreach($results as $result)
 
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Location </div>
-<div><textarea class="form-control" name="location"></textarea></div>
+<div><select name="location" class="form-control" required>
+<?php $sql = "SELECT * from   tblblooddonars ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               ?>  
+<option value="<?php echo htmlentities($result->Address);?>"><?php echo htmlentities($result->Address);?></option>
+<?php }} ?>
+</select>
+</div>
 </div>
 
 </div>
@@ -116,7 +129,7 @@ if(isset($_POST['submit']))
 $status=1;
 $bloodgroup=$_POST['bloodgroup'];
 $location=$_POST['location'];
-$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) ||  (Address=:location)";
+$sql = "SELECT * from tblblooddonars where (status=:status and BloodGroup=:bloodgroup) &&  (Address=:location)";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':status',$status,PDO::PARAM_STR);
 $query->bindParam(':bloodgroup',$bloodgroup,PDO::PARAM_STR);
@@ -131,7 +144,7 @@ foreach($results as $result)
 
             <div class="col-lg-4 col-sm-6 portfolio-item">
                 <div class="card h-100">
-                    <a href="#"><img class="card-img-top img-fluid" src="images/donor2.jpg" alt="" ></a>
+                    <a href="#"><img class="card-img-top img-fluid" src="images/blood-donor.jpg" alt="" ></a>
                     <div class="card-block">
                         <h4 class="card-title"><a href="#"><?php echo htmlentities($result->FullName);?></a></h4>
                         <p class="card-text"><b>Mobile No. / Email Id :</b> <?php echo htmlentities($result->MobileNumber);?> /
