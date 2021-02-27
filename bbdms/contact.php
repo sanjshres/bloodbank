@@ -106,14 +106,14 @@ $error="Something went wrong. Please try again";
                     <div class="control-group form-group">
                         <div class="controls">
                             <label>Full Name:</label>
-                            <input type="text" class="form-control" id="name" name="fullname" required data-validation-required-message="Please enter your name.">
+                            <input type="text" class="form-control" id="name"  pattern='^[a-zA-Z]+(?:\s[a-zA-Z]+)+$' required name="fullname" required data-validation-required-message="Please enter your full name.">
                             <p class="help-block"></p>
                         </div>
                     </div>
                     <div class="control-group form-group">
                         <div class="controls">
-                            <label>Phone Number:</label>
-                            <input type="tel" class="form-control" id="phone" name="contactno"  required data-validation-required-message="Please enter your phone number.">
+                            <label>Mobile Number:</label>
+                            <input type="tel" class="form-control" id="phone" name="contactno" pattern="^(\+\d{1,3}[- ]?)?\d{10}$"  maxlength="10" minlength="10" required required data-validation-required-message="Please enter your phone number.">
                         </div>
                     </div>
                     <div class="control-group form-group">

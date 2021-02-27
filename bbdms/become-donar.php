@@ -158,9 +158,9 @@ foreach($results as $result)
 
 <div class="row">
 <div class="col-lg-4 mb-4">
-<div class="font-italic">Address</div>
+<div class="font-italic">Address(District)</div>
 <div><select name="address" class="form-control" required>
-<option value="kathmandu">Kathmandu</option>
+<option value="Kathmandu">Kathmandu</option>
 <option value="Bhaktapur">Bhaktapur</option>
 <option value="Lalitpur">Lalitpur</option>
 <option value="Kaverepalanchok">Kaverepalanchok</option>
