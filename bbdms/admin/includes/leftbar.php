@@ -17,8 +17,13 @@
 
 				<li><a href="manage-conactusquery.php"><i class="fa fa-desktop""></i> Manage Conatctus Query</a></li>
 			<li><a href="manage-pages.php"><i class="fa fa-files-o"></i> Manage Pages</a></li>
-			<li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li>
-
+			<!-- <li><a href="update-contactinfo.php"><i class="fa fa-files-o"></i> Update Contact Info</a></li> -->
+<li><a href="#"><i class="fa fa-files-o"></i> Address</a>
+<ul>
+<li><a href="add-address.php">Add Address</a></li>
+<li><a href="manage-address.php">Manage Address</a></li>
+</ul>
+</li>
 
 			</ul>
 		</nav>

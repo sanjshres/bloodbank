@@ -160,20 +160,17 @@ foreach($results as $result)
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Address(District)</div>
 <div><select name="address" class="form-control" required>
-<option value="Kathmandu">Kathmandu</option>
-<option value="Bhaktapur">Bhaktapur</option>
-<option value="Lalitpur">Lalitpur</option>
-<option value="Kaverepalanchok">Kaverepalanchok</option>
-<option value="Makwanpur">Makwanpur</option>
-<option value="Chitwan">Chitwan</option>
-<option value="Sindhupalchok">Sindhupalchok</option>
-<option value="Nuwakot">Nuwakot</option>
-<option value="Rasuwa">Rasuwa</option>
-<option value="Sindhuli">Sindhuli</option>
-<option value="Ramechhap">Ramechhap</option>
-<option value="Dolakha">Dolakha</option>
-<option value="Dhading">Dhading</option>
-
+<?php $sql = "SELECT * from  tbladdress ";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$cnt=1;
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               ?>  
+<option value="<?php echo htmlentities($result->Address);?>"><?php echo htmlentities($result->Address);?></option>
+<?php }} ?>
 
 </select>
 </div>

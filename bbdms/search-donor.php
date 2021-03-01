@@ -97,7 +97,7 @@ foreach($results as $result)
 <div class="col-lg-4 mb-4">
 <div class="font-italic">Location </div>
 <div><select name="location" class="form-control" required>
-<?php $sql = "SELECT * from   tblblooddonars ";
+<?php $sql = "SELECT * from  tbladdress ";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
